@@ -5,5 +5,7 @@ import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 
 public interface MosbyExampleView extends MvpView {
-    void setButtonText(int btnIndex, int value);
+    void setSecButtonText(int value);
+    void setMinButtonText(int value);
+    void setHrButtonText(int value);
 }

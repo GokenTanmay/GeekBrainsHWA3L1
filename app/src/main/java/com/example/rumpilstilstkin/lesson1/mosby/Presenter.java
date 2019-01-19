@@ -27,17 +27,17 @@ public class Presenter extends MvpBasePresenter<MosbyExampleView> {
                     case "sec":
                         newModelValue = calcNewModelValue(mModel.getSeconds());
                         mModel.setSeconds(newModelValue);
-                        view.setButtonText(1, newModelValue);
+                        view.setSecButtonText(newModelValue);
                         break;
                     case "min":
                         newModelValue = calcNewModelValue(mModel.getMinutes());
                         mModel.setMinutes(newModelValue);
-                        view.setButtonText(2, newModelValue);
+                        view.setMinButtonText(newModelValue);
                         break;
                     case "hr":
                         newModelValue = calcNewModelValue(mModel.getHours());
                         mModel.setHours(newModelValue);
-                        view.setButtonText(3, newModelValue);
+                        view.setHrButtonText(newModelValue);
                         break;
                 }
             }

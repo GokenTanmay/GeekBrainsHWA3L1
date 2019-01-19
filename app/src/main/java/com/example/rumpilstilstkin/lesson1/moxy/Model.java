@@ -16,7 +16,7 @@ public class Model implements iModel {
         mList.add(0);
     }
 
-    //Является ли ошибкой то, что Presenter может запросить несуществующий индекс?
+    //Является ли ошибкой то, что Presenter может передать несуществующий индекс?
     public int getSeconds() {
         return mList.get(0);
     }

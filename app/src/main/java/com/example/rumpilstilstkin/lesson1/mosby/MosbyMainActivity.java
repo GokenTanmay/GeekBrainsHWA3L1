@@ -38,31 +38,31 @@ public class MosbyMainActivity extends MvpActivity<MosbyExampleView, Presenter>
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btnCounter1:
                 presenter.buttonClick("sec"); //Имеет ли смысл выносить наименовани кнопко в строковые константы?
                 break;
-            case  R.id.btnCounter2:
+            case R.id.btnCounter2:
                 presenter.buttonClick("min");
                 break;
-            case  R.id.btnCounter3:
+            case R.id.btnCounter3:
                 presenter.buttonClick("hr");
                 break;
         }
     }
 
     @Override
-    public void setButtonText(int btnIndex, int value) {
-        switch (btnIndex) {
-            case 1:
-                btnCounter1.setText("Количество = " + value);
-                break;
-            case 2:
-                btnCounter2.setText("Количество = " + value);
-                break;
-            case 3:
-                btnCounter3.setText("Количество = " + value);
-                break;
-        }
+    public void setSecButtonText(int value) {
+        btnCounter1.setText("Количество = " + value);
+    }
+
+    @Override
+    public void setMinButtonText(int value) {
+        btnCounter2.setText("Количество = " + value);
+    }
+
+    @Override
+    public void setHrButtonText(int value) {
+        btnCounter3.setText("Количество = " + value);
     }
 }
